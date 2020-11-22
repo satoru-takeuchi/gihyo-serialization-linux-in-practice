@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
                 pids[i] = fork();
                 if (pids[i] < 0) {
 			int j;
-			for (j = 0; j < ncreated; i++)
+			for (j = 0; j < ncreated; j++)
 				kill(pids[j], SIGINT);
                         goto wait_children;
                 } else if (pids[i] == 0) {
